@@ -18,7 +18,7 @@ public class UserController {
             @RequestParam(name = "pageNum", required = false, defaultValue = "1")
                     int pageNum,
             @RequestParam(name = "pageSize", required = false, defaultValue = "10")
-                    int pageSize){
+                    int pageSize) throws IllegalAccessException, InstantiationException {
         return userService.findAllUser(pageNum,pageSize);
     }
 
